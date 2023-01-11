@@ -52,7 +52,7 @@
 #     my_list.append(random.randint(1, num))
 # print(my_list)
 
-# data = open('file.txt', 'r')
+# data = open('dz2.txt', 'r')
 # mult = 1
 # for line in data:
 #     mult *= my_list[int(line)]
