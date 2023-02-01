@@ -38,6 +38,41 @@ import math
 #     return mnojetel
 # num = int(input('Введите натуральное число: '))
 # print(prostoydel(num))
+# ___________________________________________________________________
+
+
+# def sieve_of_eratosthenes(number: int) -> list:
+#     row = {i: '_' for i in range(2, number + 1) if i == 2 or i > 2 and i % 2 != 0}
+#     # use a dict cause a list too expensive operation for deletion items
+#     i = 2
+#     while True:
+#         if i ** 2 > number:
+#             break
+#         elif i != 2 and i % 2 == 0:
+#             i += 1
+#             continue
+
+#         for j in range(i, number + 1, 2):
+#             if j * i > number:
+#                 break
+#             elif (j * i) in row:
+#                 del row[j * i]
+#         i += 1
+#     return list(row)
+
+
+# def prime_factorization(number: int) -> list:
+#     prime_numbers = sieve_of_eratosthenes(number)
+#     if number in prime_numbers: return [number]
+#     prime_factors = [i for i in prime_numbers if number % i == 0]
+#     return prime_factors
+
+
+# if __name__ == '__main__':
+#     print(prime_factorization(2200))
+#     print(prime_factorization(239))
+#     print(prime_factorization(100))
+
 
 
 # 3 Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся элементов 
@@ -62,6 +97,45 @@ import math
 #     if count == 1: new_list.append(elem)
 
 # print(new_list)
+# _________________________________________________________
+
+# def main():
+#     user_array = []
+#     result_array = []
+#     user_array = list(map(int, input('Enter sequence of integer numbers. Use space bar to split. ').split()))
+
+#     for element in user_array:
+#         if user_array.count(element) == 1:
+#             result_array.append(element)
+#     print(f'Unique elements in array {user_array} are - ', end='')
+#     print(result_array)
+
+
+# if __name__ == "__main__":
+#     main()
+# ____________________________________________
+
+
+# import random
+
+# list_originals = []
+# list_work = [1, 1, 0 , 2, 3, 4, 4, 5, 6 ]
+# # for i in range(15):
+# #     list_work.append(random.randint(0,7))
+
+# #не совсем конкретное задание ...
+# for i in list_work:
+#     if i not in list_originals:
+#         list_originals.append(i)
+# print(list_work)
+# #если нужно вывести только неповторяющиеся значения, т.е. без дубликатов        
+# print(list_originals)
+
+# #если нужно вывести только неповторяющиеся значения, т.е. исключить полностью те числа, что повторялись
+# for i in list_originals:
+#     if list_work.count(list_originals[i]) > 1:
+#         while list_work.count(list_originals[i]) > 0:
+#             list_work.pop(list_work.index(list_originals[i]))
 
 
 
@@ -96,6 +170,24 @@ import math
 
 # if __name__ == "__main__":
 #     main()
+# _______________________________________________
+
+# import random
+# from os import system
+
+# system("cls")
+
+# k = int(input('Enter degree of number: '))
+
+# polynominal = ''
+# for i in range(k, 0, -1):
+#     polynominal += str(random.randrange(0,2)) + '*x^' + str(i) + ' + '
+# polynominal += str(random.randrange(0,2)) + ' = 0'
+# print(polynominal)
+
+# with open('polynominal.txt', "w") as f_obj:
+#     print(polynominal, file=f_obj, end='')
+
 
 # 5 Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл, 
 # содержащий сумму многочленов.
