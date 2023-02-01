@@ -25,6 +25,6 @@ with open('DZ5\encoding.txt', 'r') as my_file:
     my_txt = my_file.readline()
     txt_compress = my_txt.split()
 
-with open('coding.txt', 'w', encoding='UTF-8') as my_file:
+with open('DZ5\coding.txt', 'w', encoding='UTF-8') as my_file:
     my_file.write(f'{main(my_txt)}')
 
